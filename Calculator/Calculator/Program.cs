@@ -35,7 +35,11 @@ class Program
         if (q == "2")
         {
             Console.ForegroundColor = ConsoleColor.Green;
-            Console.WriteLine("Результат деления = {0}", a / b);
+            if (b != 0)
+            {
+                Console.WriteLine("Результат деления = {0}", a / b);
+            }
+            else Console.WriteLine("На 0 делить нельзя!");
         }
         if (q == "3")
         {
@@ -52,6 +56,7 @@ class Program
             Console.ForegroundColor = ConsoleColor.Green;
             Console.WriteLine("Результат возведения числа в степень = {0}", Math.Pow(a, b));
         }
+        else Console.WriteLine("Неизвесный оператор!"); 
         Console.ReadKey();
     }
 }
